@@ -4,7 +4,7 @@
 
 A web-based spatial audio explorer that lets you position audio tracks in 3D space and navigate through them using FPS-style controls. No VR headset required—just a browser and headphones.
 
-## [Try It Live](https://clarkezyz.github.io/shac_simu) 
+## [Try It Live](https://clarkezyz.github.io/shac_sim) 
 
 ## What It Does
 
