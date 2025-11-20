@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHAC Simulator - Walk Through Your Music</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Loading Screen -->
+        <div id="loading" class="screen active">
+            <div class="content">
+                <h1>🎵 SHAC Simulator</h1>
+                <p class="tagline">Simulate spatial audio in real-time</p>
+                <div class="loader">
+                    <div class="pulse"></div>
+                </div>
+                <p class="status">Click anywhere to initialize audio...</p>
+            </div>
+        </div>
+
+        <!-- Main Experience -->
+        <div id="experience" class="screen">
+            <!-- 3D Visualization Canvas -->
+            <canvas id="visualizer"></canvas>
+
+            <!-- Hidden file input for drag/drop and button -->
+            <input type="file" id="file-input" accept="audio/*" multiple hidden>
+
+            <!-- Control Panel -->
+            <div id="controls" class="controls">
+                <!-- Top Bar -->
+                <div class="top-bar">
+                    <div class="project-info">
+                        <h2 id="project-name">Spatial Mix</h2>
+                        <p id="track-count">No tracks loaded</p>
+                    </div>
+                    <div class="top-controls">
+                        <button id="view-toggle-btn" class="control-btn" title="Toggle View Mode">
+                            <span id="view-mode-label">📍 Top-Down</span>
+                        </button>
+                        <button id="add-source-btn" class="control-btn" title="Add Audio Files">
+                            <span>+ Add Files</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Source List Panel -->
+                <div id="source-panel" class="panel">
+                    <h3>Audio Sources</h3>
+                    <div id="source-list"></div>
+                </div>
+
+                <!-- Bottom Controls -->
+                <div class="bottom-controls">
+                    <button id="play-all" class="control-btn primary">
+                        <span class="play-icon">▶</span>
+                        <span>Play All</span>
+                    </button>
+                    <button id="pause-all" class="control-btn" style="display: none;">
+                        <span class="pause-icon">⏸</span>
+                        <span>Pause All</span>
+                    </button>
+                    <button id="mode-toggle" class="control-btn">
+                        <span>🎵 Composition Mode</span>
+                    </button>
+                    <button id="reset-position" class="control-btn">
+                        <span>↺ Reset Position</span>
+                    </button>
+                </div>
+
+                <!-- Instructions -->
+                <div class="instructions">
+                    <p><strong>🎨 Authoring:</strong> Drag sources, lock to prevent edits • <strong>🎵 Composition:</strong> Walk through soundscape</p>
+                    <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7;">
+                        🟢 Green = unlocked (editable) • 🔵 Cyan = locked (finalized)
+                    </p>
+                    <p style="font-size: 0.8rem; margin-top: 0.25rem; opacity: 0.7;">
+                        Lock = safety while authoring • Mode toggle = authoring vs album release
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/audio-engine.js"></script>
+    <script src="js/movement.js"></script>
+    <script src="js/visualization.js"></script>
+    <script src="js/file-loader.js"></script>
+    <script src="js/source-manager.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

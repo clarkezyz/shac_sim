@@ -1,0 +1,31 @@
+# Block all markdown files except README.md
+*.md
+!README.md
+
+# Python virtual environment (backend dev)
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if we ever add any)
+node_modules/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+.cache/
