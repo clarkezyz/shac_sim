@@ -4,11 +4,15 @@
 
 A web-based spatial audio explorer that lets you position audio tracks in 3D space and navigate through them using FPS-style controls. No VR headset required—just a browser and headphones.
 
-## [Try It Live](https://clarkezyz.github.io/shac_sim) 
+## [Try It Live](https://clarkezyz.github.io/shac_sim)
+
+> **Note**: This is a demonstration tool to explore what spatial audio feels like. This is NOT the SHAC format itself—it's a browser-based simulator to help you understand spatial audio concepts before working with actual SHAC files.
 
 ## What It Does
 
 Upload your audio files (MP3, WAV, OGG), place them in 3D space, and walk around them. Each track becomes a positioned sound source that you can hear spatially as you move through the scene.
+
+This tool gives you a hands-on feel for what spatial audio is and how positioning affects perception—think of it as a playground for understanding SHAC.
 
 Perfect for:
 - **Musicians**: Explore stems and multitrack recordings in spatial form
@@ -44,8 +48,8 @@ Perfect for:
 ### 1. Run Locally
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/shac-simulator.git
-cd shac-simulator
+git clone https://github.com/clarkezyz/shac_sim.git
+cd shac_sim
 
 # Serve it (any static server works)
 python3 -m http.server 8765
@@ -81,12 +85,16 @@ No server needed. No installation. No tracking. Just audio and math.
 
 ## Why This Exists
 
+**This is a learning tool, not the final product.**
+
+Spatial audio is hard to understand without experiencing it firsthand. This simulator lets anyone with a browser explore spatial audio concepts before diving into the actual [SHAC format](https://github.com/clarkezyz/shac-player-online).
+
 Spatial audio has been locked behind:
 - Expensive VR headsets
 - Proprietary tools and formats (Dolby Atmos, Apple Spatial Audio)
 - Complex professional software
 
-But the Web Audio API has had everything needed for spatial audio since 2011. This tool democratizes spatial music exploration—anyone with a browser can experience and create spatial audio.
+This simulator breaks down that barrier—load any audio files and immediately experience spatial positioning. Once you understand the concepts here, you can create professional SHAC files for distribution.
 
 ## How It's Different
 
@@ -108,7 +116,9 @@ Tested on Chrome, Firefox, Edge, and Safari.
 
 ## Related Projects
 
-**[SHAC Player](https://github.com/your-username/shac-player)** - High-quality spatial audio playback using Ambisonics (spherical harmonics). SHAC Simulator is the creative/exploratory tool; SHAC Player is the distribution format.
+**[SHAC Player](https://github.com/clarkezyz/shac-player-online)** - The actual SHAC format player using Ambisonics (spherical harmonics) for high-quality spatial audio distribution.
+
+**Relationship**: This simulator is a demonstration/learning tool. The SHAC Player is the real product for distributing spatial audio. Use this simulator to understand spatial audio concepts, then create actual SHAC files for distribution.
 
 ## Contributing
 
